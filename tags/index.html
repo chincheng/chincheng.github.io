@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" />
+<html lang="zh-TW" />
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -116,21 +116,24 @@
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/building-a-website-using-hugo/">
-      <div class="post-card-image" style="background-image: url(/img/cool-photo1.jpg)"></div>
+    <a class="post-card-image-link" href="/build-a-docker-image/">
+      <div class="post-card-image" style="background-image: url(/img/cargo.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/building-a-website-using-hugo/">
+      <a class="post-card-content-link" href="/build-a-docker-image/">
           <header class="post-card-header">
+              <span class="post-card-tags">
+              #project  </span>
               
-              <h2 class="post-card-title">Building A Website Using Hugo</h2>
+              <h2 class="post-card-title">Build a Docker Image</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>This is a good tutorial of building a website using Hugo.
-  </p>
+                <p> Build a container image of Hugo  $ docker build -t ownName/imageName
+ Dockerfile for building image:
+FROM alpine:latest LABEL maintainer=&quot;xxxxx@outlook.com&quot; RUN apk add --no-cache \ curl \ git \ openssh-client \ rsync ENV VERSION 0.50 RUN mkdir -p /usr/local/src \ &amp;&amp; cd /usr/local/src \ &amp;&amp; curl -L https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-64bit.tar.gz | tar -xz \ &amp;&amp; mv hugo /usr/local/bin/hugo \ &amp;&amp; curl -L https://bin.equinox.io/c/dhgbqpS8Bvy/minify-stable-linux-amd64.tgz | tar -xz \ &amp;&amp; mv minify /usr/local/bin/ \ &amp;&amp; addgroup -Sg 1000 hugo \ &amp;&amp; adduser -SG hugo -u 1000 -h /src hugo WORKDIR /src EXPOSE 1313   </p>
               
           </section>
       </a>
@@ -146,7 +149,7 @@
 <article class="post-card post"> 
     
     <a class="post-card-image-link" href="/post/">
-      <div class="post-card-image" style="background-image: url(/defimg/7.jpg)"></div>
+      <div class="post-card-image" style="background-image: url(/defimg/5.jpg)"></div>
     </a>    
     
 
@@ -173,24 +176,21 @@
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="/build-a-docker-image/">
-      <div class="post-card-image" style="background-image: url(/img/cargo.jpg)"></div>
+    <a class="post-card-image-link" href="/building-a-website-using-hugo/">
+      <div class="post-card-image" style="background-image: url(/img/cool-photo1.jpg)"></div>
     </a>
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="/build-a-docker-image/">
+      <a class="post-card-content-link" href="/building-a-website-using-hugo/">
           <header class="post-card-header">
-              <span class="post-card-tags">
-              #project  </span>
               
-              <h2 class="post-card-title">Build a Docker Image</h2>
+              <h2 class="post-card-title">Building A Website Using Hugo</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p> Build a container image of Hugo  $ docker build -t ownName/imageName
- Dockerfile for building image:
-FROM alpine:latest LABEL maintainer=&quot;xxxxx@outlook.com&quot; RUN apk add --no-cache \ curl \ git \ openssh-client \ rsync ENV VERSION 0.50 RUN mkdir -p /usr/local/src \ &amp;&amp; cd /usr/local/src \ &amp;&amp; curl -L https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-64bit.tar.gz | tar -xz \ &amp;&amp; mv hugo /usr/local/bin/hugo \ &amp;&amp; curl -L https://bin.equinox.io/c/dhgbqpS8Bvy/minify-stable-linux-amd64.tgz | tar -xz \ &amp;&amp; mv minify /usr/local/bin/ \ &amp;&amp; addgroup -Sg 1000 hugo \ &amp;&amp; adduser -SG hugo -u 1000 -h /src hugo WORKDIR /src EXPOSE 1313   </p>
+                <p>This is a good tutorial of building a website using Hugo.
+  </p>
               
           </section>
       </a>
