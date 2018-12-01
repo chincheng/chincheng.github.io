@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on </title>
+    <link>/tags/tech/</link>
+    <description>Recent content in Tech on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Thu, 01 Nov 2018 08:41:42 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Build a Docker Image</title>
+      <link>/build-a-docker-image/</link>
+      <pubDate>Thu, 01 Nov 2018 08:41:42 +0000</pubDate>
+      
+      <guid>/build-a-docker-image/</guid>
+      <description> Build a container image of Hugo  $ docker build -t ownName/imageName
+ Dockerfile for building image:
+FROM alpine:latest LABEL maintainer=&amp;quot;xxxxx@outlook.com&amp;quot; RUN apk add --no-cache \ curl \ git \ openssh-client \ rsync ENV VERSION 0.50 RUN mkdir -p /usr/local/src \ &amp;amp;&amp;amp; cd /usr/local/src \ &amp;amp;&amp;amp; curl -L https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-64bit.tar.gz | tar -xz \ &amp;amp;&amp;amp; mv hugo /usr/local/bin/hugo \ &amp;amp;&amp;amp; curl -L https://bin.equinox.io/c/dhgbqpS8Bvy/minify-stable-linux-amd64.tgz | tar -xz \ &amp;amp;&amp;amp; mv minify /usr/local/bin/ \ &amp;amp;&amp;amp; addgroup -Sg 1000 hugo \ &amp;amp;&amp;amp; adduser -SG hugo -u 1000 -h /src hugo WORKDIR /src EXPOSE 1313  </description>
+    </item>
+    
+  </channel>
+</rss>
