@@ -6,10 +6,22 @@
     <description>Recent content in Posts on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Thu, 01 Nov 2018 08:41:42 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Dec 2018 17:44:17 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rasp Cm3</title>
+      <link>/rasp-cm3/</link>
+      <pubDate>Sat, 01 Dec 2018 17:44:17 +0000</pubDate>
+      
+      <guid>/rasp-cm3/</guid>
+      <description>How to flash OS image into SD for Raspberry Pi CM3 It is more easy by using Linux system
+items needed in installing process:
+ &amp;ldquo;rpiboot&amp;rdquo; &amp;ldquo;Raspbian lite&amp;rdquo; image: Do not use image for desktop because CM1/CM3 only has 4GB eMMC. It can be downloaded from official site, https://www.raspberrypi.org/downloads/raspbian/  Compile &amp;ldquo;rpiboot&amp;rdquo; ( use Ubuntu as example)
+ Open a terminal in Linux host PC Install packages needed:  sudo apt-get update sudo apt-get install -y git make gcc libusb-1.</description>
+    </item>
     
     <item>
       <title>Build a Docker Image</title>
