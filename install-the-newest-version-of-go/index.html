@@ -4,35 +4,46 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>Blog &middot; </title>
+    <title>Install the newest version of Go &middot; </title>
 
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="canonical" href="/categories/blog/" />
+    <link rel="canonical" href="/install-the-newest-version-of-go/" />
 
-    
-    <meta name="description" content="Notes of my study" /> 
+     <meta name="description" content="How I Install newest Go compiler  Install Go from distribution. ( It may be old version.)
+ $ sudo apt install golang-go
+ Make a directory to clone the source co" /> 
 
+     
     
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:image" content="/images/header02.jpg"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:image" content="/images/golang01.png"/>
+    
  
-    <meta name="twitter:title" content="Blog"/>
-    <meta name="twitter:description" content="Notes of my study"/>
-    <meta name="twitter:url" content="/categories/blog/" />
+    <meta name="twitter:title" content="Install the newest version of Go"/>
+    <meta name="twitter:description" content="How I Install newest Go compiler  Install Go from distribution. ( It may be old version.)
+ $ sudo apt install golang-go
+ Make a directory to clone the source co"/>
+    <meta name="twitter:url" content="/install-the-newest-version-of-go/" />
     <meta name="twitter:site" content="@Chincheng"/>
 
     <meta property="og:site_name" content="" />
-    <meta property="og:title" content="Blog &middot; Chincheng&#39;s site" />
-    <meta property="og:url" content="/categories/blog/" />
+    <meta property="og:title" content="Install the newest version of Go &middot; Chincheng&#39;s site" />
+    <meta property="og:url" content="/install-the-newest-version-of-go/" />
     <meta property="article:publisher" content="https://www.facebook.com/chincheng.chen" />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="Notes of my study" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="How I Install newest Go compiler  Install Go from distribution. ( It may be old version.)
+ $ sudo apt install golang-go
+ Make a directory to clone the source co" />
 
-    <meta property="og:image" content="/images/header02.jpg"/>
+    <meta property="article:published_time" content="2019-03-06T12:00:35Z" />
+    <meta property="article:tag" content="tech" />
+
+    <meta property="og:image" content="/images/golang01.png"/>
+
 
     <meta name="generator" content="Hugo 0.50" />
 
@@ -47,9 +58,11 @@
 </head>
 
 
+<body class="ctsingle">
 
-  <body class="home-template"><div class="site-wrapper">
-  <header class="site-header outer "  style="background-image: url(/images/header02.jpg)"  >
+  <div class="site-wrapper"> 
+
+<header class="site-header outer "  style="background-image: url(/images/header02.jpg)"  >
   <div class="inner">
     <div class="site-header-content">
       <h1 class="site-title"> Chincheng&#39;s site  </h1>
@@ -69,7 +82,7 @@
               <a href="/tags/tech/">Tech</a>
             </li>
         
-            <li class="nav-current" role="menuitem">
+            <li class="" role="menuitem">
               <a href="/categories/blog/">Blog</a>
             </li>
         
@@ -102,11 +115,9 @@
 
 <main id="site-main" class="site-main outer" role="main">
   <div class="inner">
+    
     <div class="post-feed">
-      
-
-
-<article class="post-card post"> 
+      <article class="post-card post"> 
     
     <a class="post-card-image-link" href="/install-the-newest-version-of-go/">
       <div class="post-card-image" style="background-image: url(/images/golang01.png)"></div>
@@ -121,17 +132,54 @@
               
               <h2 class="post-card-title">Install the newest version of Go</h2>
           </header>
-          <section class="post-card-excerpt">
-              
-                <p>How I Install newest Go compiler  Install Go from distribution. ( It may be old version.)
- $ sudo apt install golang-go
- Make a directory to clone the source code of Go.
-$ mkdir ~/workspace $ cd ~/workspace $ git clone https://go.googlesource.com/go $ cd go  Checkout branch to new version (1.12 now)
- $ git checkout go1.12
- Go to src directory and run a script of building Go compiler ...  </p>
-              
-          </section>
       </a>
+      <section class="post-card-excerpt" style="padding: 0 25px;">
+          
+
+<h2 id="how-i-install-newest-go-compiler">How I Install newest Go compiler</h2>
+
+<ul>
+<li><p>Install Go from distribution. ( It may be old version.)</p>
+
+<blockquote>
+<p>$ sudo apt install golang-go</p>
+</blockquote></li>
+
+<li><p>Make a directory to clone the source code of Go.</p>
+
+<pre><code>$ mkdir ~/workspace
+$ cd ~/workspace
+
+$ git clone https://go.googlesource.com/go
+
+$ cd go
+</code></pre></li>
+
+<li><p>Checkout branch to new version (1.12 now)</p>
+
+<blockquote>
+<p>$ git checkout go1.12</p>
+</blockquote></li>
+
+<li><p>Go to src directory and run a script of building Go compiler</p>
+
+<pre><code>$ cd src
+
+$ ./all.bash
+</code></pre></li>
+
+<li><p>After sucessful building, remove old compiler.</p>
+
+<pre><code>$ sudo apt remove golang-go
+$ sudo apt autoremove
+</code></pre></li>
+
+<li><p>Remember to add the path where &lsquo;go&rsquo; complier is located, and set Go environment properly, such as GOPATH.</p>
+
+<p>Refer to the installation guide of Go document.</p></li>
+</ul>
+
+      </section>
 
       <footer class="post-card-meta">
           <img class="author-profile-image" src="/images/portrait.jpg" alt="Author" />
@@ -139,111 +187,24 @@ $ mkdir ~/workspace $ cd ~/workspace $ git clone https://go.googlesource.com/go 
       </footer>
     </div>
 </article>
-
-
-<article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="/install-os-for-raspberry-pi-cm3/">
-      <div class="post-card-image" style="background-image: url(/images/raspberry.jpg)"></div>
-    </a>
-    
-
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="/install-os-for-raspberry-pi-cm3/">
-          <header class="post-card-header">
-              <span class="post-card-tags">
-              #tech  </span>
-              
-              <h2 class="post-card-title">Install OS for Raspberry Pi CM3</h2>
-          </header>
-          <section class="post-card-excerpt">
-              
-                <p>How to flash OS image into SD for Raspberry Pi CM3 It is more easy by using Linux system
-items needed in installing process:
- &ldquo;rpiboot&rdquo; &ldquo;Raspbian lite&rdquo; image: Do not use image for desktop because CM1/CM3 only has 4GB eMMC. It can be downloaded from official site, https://www.raspberrypi.org/downloads/raspbian/  Compile &ldquo;rpiboot&rdquo; ( use Ubuntu as example)
- Open a terminal in Linux host PC Install packages needed:  sudo apt-get update sudo apt-get install -y git make gcc libusb-1. ...  </p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="/images/portrait.jpg" alt="Author" />
-          <span class="post-card-author"><a href="/">Chincheng</a></span>
-      </footer>
-    </div>
-</article>
-
-
-<article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="/build-a-docker-image/">
-      <div class="post-card-image" style="background-image: url(/images/cargo.jpg)"></div>
-    </a>
-    
-
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="/build-a-docker-image/">
-          <header class="post-card-header">
-              <span class="post-card-tags">
-              #tech  </span>
-              
-              <h2 class="post-card-title">Build a Docker Image</h2>
-          </header>
-          <section class="post-card-excerpt">
-              
-                <p> Build a container image of Hugo  $ docker build -t ownName/imageName
- Dockerfile for building image:
-FROM alpine:latest LABEL maintainer=&quot;xxxxx@outlook.com&quot; RUN apk add --no-cache \ curl \ git \ openssh-client \ rsync ENV VERSION 0.50 RUN mkdir -p /usr/local/src \ &amp;&amp; cd /usr/local/src \ &amp;&amp; curl -L https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_linux-64bit.tar.gz | tar -xz \ &amp;&amp; mv hugo /usr/local/bin/hugo \ &amp;&amp; curl -L https://bin.equinox.io/c/dhgbqpS8Bvy/minify-stable-linux-amd64.tgz | tar -xz \ &amp;&amp; mv minify /usr/local/bin/ \ &amp;&amp; addgroup -Sg 1000 hugo \ &amp;&amp; adduser -SG hugo -u 1000 -h /src hugo WORKDIR /src EXPOSE 1313   </p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="/images/portrait.jpg" alt="Author" />
-          <span class="post-card-author"><a href="/">Chincheng</a></span>
-      </footer>
-    </div>
-</article>
-
-
-<article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="/building-a-website-using-hugo/">
-      <div class="post-card-image" style="background-image: url(/images/cool-photo1.jpg)"></div>
-    </a>
-    
-
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="/building-a-website-using-hugo/">
-          <header class="post-card-header">
-              
-              <h2 class="post-card-title">Building A Website Using Hugo</h2>
-          </header>
-          <section class="post-card-excerpt">
-              
-                <p>This is a good tutorial of building a website using Hugo.
-  </p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="/images/portrait.jpg" alt="Author" />
-          <span class="post-card-author"><a href="/">Chincheng</a></span>
-      </footer>
-    </div>
-</article>
-
-
     </div>
 
     <nav class="pagination" role="navigation">
       
-      <span class="page-number"><span class="hide">Page 1 of 1</span>&nbsp;</span>
+      <span class="page-number">&nbsp;</span>
+      
+          <a class="older-posts" href="/install-os-for-raspberry-pi-cm3/"><span class="hide">Previous Post</span> &rarr;</a>
       
     </nav>
+
+    
+    
+    
+
   </div>
 </main>
+
+
 
 <footer class="site-footer outer">
   <div class="site-footer-content inner">
@@ -262,11 +223,14 @@ FROM alpine:latest LABEL maintainer=&quot;xxxxx@outlook.com&quot; RUN apk add --
   </div>
 </footer>
 
-</div><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+</div>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
 
 <script>hljs.initHighlightingOnLoad();</script>
+
+
 
 
 </body></html>

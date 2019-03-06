@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Installation_Go</title>
-      <link>/installation_go/</link>
+      <title>Install the newest version of Go</title>
+      <link>/install-the-newest-version-of-go/</link>
       <pubDate>Wed, 06 Mar 2019 12:00:35 +0000</pubDate>
       
-      <guid>/installation_go/</guid>
+      <guid>/install-the-newest-version-of-go/</guid>
       <description>How I Install newest Go compiler  Install Go from distribution. ( It may be old version.)
  $ sudo apt install golang-go
  Make a directory to clone the source code of Go.
